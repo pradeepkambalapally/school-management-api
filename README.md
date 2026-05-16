@@ -1,182 +1,37 @@
-# School Management API
-
-A Node.js and MySQL based REST API for managing school data and listing schools based on proximity to a user’s location.
-
-## Features
-
-- Add new schools
-- Store school details in MySQL
-- Fetch schools sorted by nearest distance
-- RESTful APIs
-- MySQL database integration
-
 ---
 
-## Tech Stack
+# Live Deployment
 
-- Node.js
-- Express.js
-- MySQL
-- mysql2
-- dotenv
-
----
-
-## Project Structure
+Base URL:
 
 ```bash
-school-management-api/
-│
-├── controllers/
-│   └── schoolController.js
-│
-├── routes/
-│   └── schoolRoutes.js
-│
-├── .env
-├── .gitignore
-├── db.js
-├── server.js
-├── package.json
-└── README.md
+https://school-management-api-yisi.onrender.com
 ```
 
 ---
 
-## Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/pradeepkambalapally/school-management-api
-```
-
-### Navigate to Project
-
-```bash
-cd school-management-api
-```
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## Environment Variables
-
-Create a `.env` file in the root directory.
-
-```env
-PORT=5000
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_mysql_password
-DB_NAME=school_management
-```
-
----
-
-## Database Setup
-
-Open MySQL Workbench and run:
-
-```sql
-CREATE DATABASE school_management;
-
-USE school_management;
-
-CREATE TABLE schools (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    address VARCHAR(255),
-    latitude FLOAT,
-    longitude FLOAT
-);
-```
-
----
-
-## Run Project
-
-### Development Mode
-
-```bash
-npm run dev
-```
-
-### Production Mode
-
-```bash
-npm start
-```
-
----
-
-# API Endpoints
+# Live API Endpoints
 
 ## Add School
 
-### POST `/addSchool`
+### POST
 
-### Request Body
-
-```json
-{
-  "name": "SPR School",
-  "address": "Narketpally",
-  "latitude": 17.2041,
-  "longitude": 79.1940
-}
-```
-
-### Response
-
-```json
-{
-  "message": "School added successfully",
-  "success": true
-}
+```bash
+https://school-management-api-yisi.onrender.com/addSchool
 ```
 
 ---
 
 ## List Schools
 
-### GET `/listSchools`
-
-### Example
+### GET
 
 ```bash
-/listSchools?latitude=17.2041&longitude=79.1940
-```
-
-### Response
-
-```json
-[
-  {
-    "id": 1,
-    "name": "SPR School",
-    "address": "Narketpally",
-    "latitude": 17.2041,
-    "longitude": 79.1940,
-    "distance": 0
-  }
-]
+https://school-management-api-yisi.onrender.com/listSchools?latitude=17.2041&longitude=79.1940
 ```
 
 ---
 
-## Distance Calculation
+# Postman Collection
 
-The API calculates geographical distance between user coordinates and school coordinates using the Haversine Formula.
-
----
-
-## Author
-
-Pradeep
+https://pradeepkambalapally009-7452462.postman.co/workspace/Pradeep-Kambalapally's-Workspac~090ebe68-524d-4467-8c32-9c29522a2c4d/collection/48864256-0c189f9c-37c9-4f6c-9ad5-ef997e0b6f40?action=share&creator=48864256
