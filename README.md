@@ -48,7 +48,7 @@ school-management-api/
 ### Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/pradeepkambalapally/school-management-api
 ```
 
 ### Navigate to Project
